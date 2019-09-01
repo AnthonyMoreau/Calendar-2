@@ -1,0 +1,4 @@
+@mixin dd($color, $border: 0px) {
+    background-color: $color;
+    border: $border solid black;
+}

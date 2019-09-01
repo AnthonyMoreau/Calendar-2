@@ -1,0 +1,119 @@
+.calendar-container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    margin: auto;
+
+    .calendar{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 1fr 12fr 1fr 1fr;
+        grid-template-areas: 
+        " year year year year year year year "
+        " Monday  Tuesday Wednesday Thursday Friday Saturday Sunday "
+        " weeks weeks weeks weeks weeks weeks weeks "
+        " buttons buttons buttons buttons buttons buttons buttons ";
+    }
+    #day{
+        text-align: center;
+        width: 12.85vw;
+        z-index: 0;
+    }
+    .day{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+        z-index: 0;
+        .day-container{
+            width: 33%;
+        }
+    }
+    .year{
+        grid-area: year;
+        text-align: center;
+        padding: 1em 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        "morning"
+        "afternoon";
+    }
+    .Monday{
+        grid-area: Monday;
+    }
+    .Tuesday{
+        grid-area: Tuesday;
+    }
+    .Wednesday{
+        grid-area: Wednesday;
+    }
+    .Thursday{
+        grid-area: Thursday;
+    }
+    .Friday{
+        grid-area: Friday;
+    }
+    .Saturday{
+        grid-area: Saturday;
+    }
+    .Sunday{
+        grid-area: Sunday;
+    }
+    .morning{
+        grid-area: morning;
+        height: 47%;
+        margin: 1em 0 0 0;
+        border-bottom: 0.5px solid black;
+    }
+    .afternoon{
+        grid-area: afternoon;
+        height: 47%;
+        margin: 1em 0 0 0;
+        
+    }
+    .morning, .afternoon {
+        textarea{
+            line-height: 1.5em;
+            font-family:"Courier New", Courier, monospace;
+            font-size: 1.1em;
+            width: 98%;
+            min-height: 100%;
+            border: none;
+            border-bottom: 0.5px solid black;
+            padding: -0.5em;
+            background-color: rgba(0, 0, 0, 0.233);
+            border-top-right-radius: 1.5em;
+            z-index: 0;
+            &:focus{
+                background-color: rgba(0, 0, 0, 0.123);
+            }
+        }
+    }
+    .morning{
+        textarea{
+            resize: none;
+        }
+    }
+    .weeks{
+        grid-area: weeks;    
+        text-align: center;
+        margin: 2em 0 0 0;
+    }
+    .buttons{
+        grid-area: buttons;
+        text-align: center;
+        font-size: 1.2em;
+        margin: 1em 0 0 0;
+    }
+}
+.submit{
+    text-align: center;
+    margin: 4em 0 0 0; 
+    input{
+        z-index: 2;
+    }
+    
+}

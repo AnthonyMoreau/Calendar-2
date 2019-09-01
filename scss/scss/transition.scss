@@ -1,0 +1,11 @@
+.transition{
+    transition: .3s;
+    opacity: 1 !important;
+}
+.week {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transition: .3s;
+    opacity: 0;
+}
